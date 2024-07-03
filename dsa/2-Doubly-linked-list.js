@@ -21,17 +21,14 @@ class DoublyLinkedList {
             this.head = newNode;
             this.tail = newNode;
         } else {
-            console.log(this.tail);
             this.tail.next = newNode;
             newNode.prev = this.tail;
             this.tail = newNode;
-            console.log(this.tail);
         }
     }
 
     printList() {
         let current = this.head;
-        console.log(this.head);
         while(current){
             console.log(current.data);
             current = current.next;
